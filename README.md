@@ -9,10 +9,10 @@ This project will allow you to create custom Gridfinity divider bins.
 
 Clone the repo and install requirements from `requirements.txt`. It is _highly_ recommended to use a virtual environment for this. Read [this](https://realpython.com/python-virtual-environments-a-primer/) for more details.
 
-> Note that this requires Python >=3.8.
+> Note that this requires Python >=3.8, python3.8-venv, and pip
 
 ```
-pip install -r requirements.txt
+make packages
 ```
 
 ## Usage

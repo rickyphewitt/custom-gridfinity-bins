@@ -104,12 +104,14 @@ def draw_buckets(
 
     sketches = []
     x_origin, y_origin = (1, 1)
+
     for row in prop.divisions:
         if isinstance(row, int):
             row = [1] * row
         widths = [round(ratio / sum(row) * (prop.width - (len(row) + 1)), 2)
                   for ratio in row]
         height = (prop.length - (prop.units_long + 1)) / prop.units_long
+        height = (height * len(prop.divisions)) # full opening of bucket
 
         for width in widths:
             if width < small_drawer_width:
@@ -131,8 +133,10 @@ def draw_buckets(
             )
             x_origin = x_origin + width + 1
             sketches.append(sketch)
+
         x_origin = 1
         y_origin = y_origin + height + 1
+        y_origin = y_origin + height # ensures the edges don't get clipped
 
     if is_drawer_too_small:
         warnings.warn(

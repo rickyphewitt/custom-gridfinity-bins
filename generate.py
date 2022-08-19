@@ -1,8 +1,8 @@
 from gridfinity import Properties, make_box, export_box, export_svg
 
-UNITS_WIDE = 4 # The number of Gridfinity units wide (left to right)
-UNITS_LONG = 3 # The number of Gridfinity units long (front to back)
-UNITS_HIGH = 4 # The number of Gridfinity units high (in 7mm increments)
+UNITS_WIDE = 2 # The number of Gridfinity units wide (left to right)
+UNITS_LONG = 2 # The number of Gridfinity units long (front to back)
+UNITS_HIGH = 6 # The number of Gridfinity units high (in 7mm increments)
 
 # This define how each row is divided. The number of entries in this list
 # must be equal to the number of UNITS_LONG defined above.
@@ -21,10 +21,13 @@ DIVISIONS = [
                # The numbers are ratio'd dynamically.
 ]
 
+
+DIVISIONS = [1,1]
+
 # Draw the rounded finger scoop on the front of each drawer.
-DRAW_FINGER_SCOOP = True
+DRAW_FINGER_SCOOP = False
 # Draws a 12mm label ledge on each row.
-DRAW_LABEL_LEDGE = True
+DRAW_LABEL_LEDGE = False
 
 # Make holes on the bottom for magnets.
 MAKE_MAGNET_HOLE = False
